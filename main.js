@@ -17,6 +17,14 @@ function search(dir, fileName) {
 	createProto(dir, fileName);
 }
 
+function createModuleName(moduleName) {
+	var mn = '';
+	moduleName.split('-').forEach(i => {
+		mn = mn + i.charAt(0);
+	});
+	return mn.toUpperCase();
+}
+
 function createProto(file, fileName) {
 	const basename = path
 		.basename(file)
@@ -32,7 +40,7 @@ function createProto(file, fileName) {
 		if (arrPaths.length > 1) {
 			arrPaths.splice(0, arrPaths.indexOf('src') + 1);
 		}
-		dirname = ['src', 'protos', moduleName, ...arrPaths].join('/');
+		dirname = ['src', 'protos', createModuleName(moduleName), ...arrPaths].join('/');
 		var fPath = basePath;
 		dirname.split('/').forEach(item => {
 			fPath = fPath + item + '/';

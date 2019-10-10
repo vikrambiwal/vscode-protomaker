@@ -2,10 +2,11 @@
 	"name": "protomaker",
 	"displayName": "ProtoMaker",
 	"description": "",
-	"version": "0.0.1",
+	"version": "0.0.6",
 	"publisher": "vikramvk",
+	"icon": "img.png",
 	"engines": {
-		"vscode": "^1.38.0"
+		"vscode": "^1.37.1"
 	},
 	"categories": [
 		"Other"
@@ -25,6 +26,7 @@
 	"scripts": {
 		"test": "node ./test/runTest.js"
 	},
+	"repository": "https://github.com/vikrambiwal/vscode-protomaker",
 	"devDependencies": {
 		"@types/glob": "^7.1.1",
 		"@types/mocha": "^5.2.6",
